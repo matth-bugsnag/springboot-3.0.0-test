@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '3.0.0-RC1'
+	id 'org.springframework.boot' version '3.0.1'
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'java'
 }
@@ -9,17 +9,20 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
+	// maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencies {
+	implementation 'com.bugsnag:bugsnag-spring:3.6.5'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.bugsnag:bugsnag-spring:3.+'
-
+	// testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+// compileJava.options.fork = true
+// compileJava.options.forkOptions.executable = '/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin/java'
+
+// tasks.named('test') {
+// 	useJUnitPlatform()
+// }

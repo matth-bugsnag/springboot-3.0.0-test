@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 import com.bugsnag.BugsnagSpringConfiguration;
 
 @Configuration
-@Import(BugsnagSpringConfiguration.class) // <<< THIS line, when included casuses {'command '/opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk/Contents/Home/bin/java'' finished with non-zero exit value 1}
+// @Import(BugsnagSpringConfiguration.class) // <<< THIS line, when included casuses {'command '/opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk/Contents/Home/bin/java'' finished with non-zero exit value 1}
 // When not included, the project runs fine, and is able to sent events to Bugsnag. 
 public class Config {
     @Bean

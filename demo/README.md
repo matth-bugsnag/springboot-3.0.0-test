@@ -8,3 +8,12 @@ Removing line 10 in `Config.java` will allow the application to start, however, 
 
 To run project use: `gradle bootRun`
 
+Problems with compat:
+
+Springboot3 requires gradle version 7+ (Use SDKMAN (sdk) to manage gradle version; Gradle version 7+ required JDK-16+).
+
+Im using JDk-17 and Gradle 7+.
+
+
+
+https://stackoverflow.com/questions/70751808/how-to-change-the-gradle-version 
